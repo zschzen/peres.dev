@@ -15,11 +15,16 @@ export default defineNuxtConfig({
 
   srcDir: "src/",
 
-  modules: ["@nuxt/eslint"],
+  modules: ["@nuxt/eslint", "@vesp/nuxt-fontawesome"],
 
   eslint: {
     config: {
       standalone: false,
+    },
+  },
+
+  fontawesome: {
+    icons: {
     },
   },
 });
