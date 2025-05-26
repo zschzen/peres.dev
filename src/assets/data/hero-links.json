@@ -1,0 +1,39 @@
+{
+  "menuItems": [
+    {
+      "name": "Resume",
+      "url": "https://resume.peres.dev",
+      "icon": "simple-icons:readdotcv",
+      "tooltip": "My CV/Résumé",
+      "important": true
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/leandroperes",
+      "icon": "logos:linkedin-icon",
+      "important": true
+    },
+    {
+      "name": "GitHub",
+      "url": "https://www.github.com/zschzen",
+      "icon": "f7:logo-github"
+    },
+    {
+      "name": "BlueSky",
+      "url": "https://bsky.app/profile/peres.dev",
+      "icon": "logos:bluesky",
+      "tooltip": "My (random) thoughts"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/zschzen",
+      "icon": "skill-icons:instagram",
+      "tooltip": "My ą̷͓̫̗͙̩̞̥͋͋̐͊̎̄̀̎̏͆̉̍̈̏̾͑͑͂̀̽͗͊̋̆̃̀̇͑̀̅̎͘͝͠rt̶̞̆͐"
+    },
+    {
+      "name": "Revolt.chat",
+      "url": "https://rvlt.gg/K9VNFS3p",
+      "icon": "simple-icons:revoltdotchat"
+    }
+  ]
+}
