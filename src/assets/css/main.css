@@ -1,6 +1,54 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes:
-    light --default,
-    dark --prefersdark;
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "oxocarbon-dark";
+  default: false;
+  prefersdark: true; /* set as default dark mode */
+  color-scheme: dark; /* color of browser-provided UI */
+
+  /* Base colors */
+  --color-base-100: oklch(14% 0.01 240); /* #161616 */
+  --color-base-200: oklch(18% 0.01 240); /* #262626 */
+  --color-base-300: oklch(25% 0.01 240); /* #393939 */
+  --color-base-content: oklch(88% 0.02 240); /* #f2f4f8 */
+
+  --color-primary: oklch(72% 0.12 180); /* #08bdba - teal */
+  --color-primary-content: oklch(14% 0.01 240);
+
+  --color-secondary: oklch(68% 0.25 340); /* #ee5396 - pink */
+  --color-secondary-content: oklch(95% 0.01 240);
+
+  --color-accent: oklch(82% 0.15 185); /* #3ddbd9 - cyan */
+  --color-accent-content: oklch(14% 0.01 240);
+
+  --color-neutral: oklch(38% 0.01 240); /* #525252 */
+  --color-neutral-content: oklch(88% 0.02 240);
+
+  --color-info: oklch(70% 0.15 240); /* #78a9ff */
+  --color-info-content: oklch(14% 0.01 240);
+
+  --color-success: oklch(72% 0.15 140); /* #42be65 */
+  --color-success-content: oklch(14% 0.01 240);
+
+  --color-warning: oklch(72% 0.15 220); /* #33b1ff */
+  --color-warning-content: oklch(14% 0.01 240);
+
+  --color-error: oklch(75% 0.25 320); /* #ff7eb6 */
+  --color-error-content: oklch(14% 0.01 240);
+
+  /* Border radius */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.5rem;
+
+  /* Base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Border size */
+  --border: 0.25rem;
+
+  /* Effects */
+  --depth: 0.5;
+  --noise: 0.1;
 }
