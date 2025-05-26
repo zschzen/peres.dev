@@ -10,7 +10,7 @@ type BlogPost = {
   summary: string;
 };
 
-const BASE_URL = "https://peres.dev";
+const BASE_URL = "https://zschzen.github.io/";
 const FEED_URL = `${BASE_URL}/feed.xml`;
 
 const loading = ref(false);
