@@ -16,19 +16,24 @@ const FEED_URL = `${BASE_URL}/feed.xml`;
 const loading = ref(false);
 const error = ref<string | null>(null);
 const posts = ref<BlogPost[]>([]);
-
 const visiblePosts = computed(() => posts.value.slice(0, 4));
+
+// Initialize Umami analytics proxy
+const { proxy } = useScriptUmamiAnalytics();
 
 async function fetchPosts() {
   loading.value = true;
   error.value = null;
+
   try {
     const res = await fetch(FEED_URL, { headers: { Accept: "application/xml" } });
     if (!res.ok)
       throw new Error(res.statusText);
+
     const xml = await res.text();
     const doc = new DOMParser().parseFromString(xml, "application/xml");
     const entries = Array.from(doc.querySelectorAll("entry"));
+
     posts.value = entries.map((entry) => {
       const path = entry.querySelector("id")?.textContent?.trim() || "/";
       return {
@@ -49,8 +54,16 @@ async function fetchPosts() {
   }
 }
 
-function openPost(path: string) {
-  const url = path.startsWith("http") ? path : `${BASE_URL}${path}`;
+function openPost(post: BlogPost) {
+  const url = post.id.startsWith("http") ? post.id : `${BASE_URL}${post.id}`;
+
+  // Track the blog post click using proxy
+  proxy.track("event", {
+    name: "blog-post-click",
+    postTitle: post.title,
+    postUrl: url,
+  });
+
   window.open(url, "_blank");
 }
 
@@ -91,7 +104,7 @@ onMounted(fetchPosts);
         v-for="post in visiblePosts"
         :key="post.id"
         class="card bg-base-100 border border-gray-200 cursor-pointer transform transition hover:shadow-2xl hover:-translate-y-1"
-        @click="openPost(post.id)"
+        @click="openPost(post)"
       >
         <div class="card-body p-4">
           <h2 class="card-title text-lg line-clamp-2">

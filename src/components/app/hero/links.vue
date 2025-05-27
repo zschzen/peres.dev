@@ -26,6 +26,18 @@ const props = withDefaults(defineProps<Props>(), {
 
 // Computed property for menu items with proper typing
 const menuItems = computed<MenuItem[]>(() => props.items);
+
+// Initialize Umami analytics proxy
+const { proxy } = useScriptUmamiAnalytics();
+
+// Handle link click with tracking
+function handleLinkClick(item: MenuItem) {
+  // Track the event using proxy
+  proxy.track("event", {
+    name: "menu-link-click",
+    linkName: item.name,
+  });
+}
 </script>
 
 <template>
@@ -48,6 +60,7 @@ const menuItems = computed<MenuItem[]>(() => props.items);
           :aria-label="item.name"
           target="_blank"
           rel="noopener noreferrer"
+          @click="handleLinkClick(item)"
         >
           <template v-if="item.important">
             <span class="indicator-item status status-error animate-ping" />

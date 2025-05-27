@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     "@vesp/nuxt-fontawesome",
     "@nuxt/icon",
     "@nuxt/fonts",
+    "@nuxt/scripts",
   ],
 
   eslint: {
@@ -42,6 +43,16 @@ export default defineNuxtConfig({
 
   fontawesome: {
     icons: {
+    },
+  },
+
+  $production: {
+    scripts: {
+      registry: {
+        umamiAnalytics: {
+          websiteId: "dfa1ff7c-365d-477a-b347-3ac83695d67b",
+        },
+      },
     },
   },
 });

@@ -1,3 +1,17 @@
+<script setup lang="ts">
+// Initialize Umami analytics proxy
+const { proxy } = useScriptUmamiAnalytics();
+
+// Handle email click with tracking
+function handleEmailClick() {
+  proxy.track("event", {
+    name: "email-contact-click",
+    email: "leandro@peres.dev",
+    source: "contact-section",
+  });
+}
+</script>
+
 <template>
   <div class="hero py-4 px-4">
     <div class="hero-content flex flex-col items-center justify-center w-full max-w-4xl mx-auto">
@@ -39,6 +53,7 @@
             class="inline-flex items-center text-lg sm:text-xl text-gray-50 hover:text-gray-400 font-medium hover:underline"
             target="_blank"
             rel="noopener noreferrer"
+            @click="handleEmailClick"
           >
             leandro@peres.dev
           </a>
