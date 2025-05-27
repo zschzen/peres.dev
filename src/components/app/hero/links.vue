@@ -71,7 +71,7 @@ function handleLinkClick(item: MenuItem) {
             :name="item.icon"
             aria-hidden="true"
             size="1.75rem"
-            class="grayscale-25 group-hover:grayscale-0 group-hover:scale-125 transition-all duration-500 ease-in-out"
+            class="grayscale-25 group-hover:grayscale-0 transition-color duration-300 ease-in-out"
           />
           <span class="sr-only">{{ item.name }}</span>
         </a>
