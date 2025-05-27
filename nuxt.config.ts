@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Leandro Peres", // default fallback title
+      title: "Leandro's Things", // default fallback title
       htmlAttrs: {
         lang: "en",
       },
