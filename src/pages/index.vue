@@ -9,17 +9,8 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="css">
 div {
   font-family: "Fira Mono", monospace;
-}
-
-h1 {
-  line-height: 1.1;
-  font-variant-numeric: tabular-nums;
-}
-
-.hero h1 {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 </style>
