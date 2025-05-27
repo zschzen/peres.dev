@@ -60,7 +60,7 @@ onMounted(fetchPosts);
 <template>
   <div class="container mx-auto p-4 max-w-full md:max-w-4xl">
     <!-- Header -->
-    <header class="text-center mb-12 py-6">
+    <header class="text-center mb-2 py-6">
       <div class="space-y-4">
         <h1 class="text-3xl lg:text-4xl font-bold mb-3 tracking-wider relative">
           Latest Blog Posts
