@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
 const cards = ref([
   {
     id: 1,
@@ -36,54 +38,35 @@ const cards = ref([
 </script>
 
 <template>
-  <div class="container mx-auto p-4 max-w-full md:max-w-4xl">
-    <!-- Header -->
-    <AppHeader
-      title="Current Projects"
-      subtitle="Check out some stuff I’ve been cooking"
-    />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <a
-        v-for="card in cards"
-        :key="card.id"
-        :href="card.url"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="border-2 border-transparent hover:border-secondary rounded-lg overflow-hidden shadow-md group hover:shadow-lg transition-all duration-300 cursor-pointer block"
-      >
-        <div class="relative h-62">
-          <NuxtImg
-            :src="card.image"
-            :alt="card.alt"
-            class="w-full h-full object-cover aspect-video transition-transform duration-500 group-hover:scale-110"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-          <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 transition-all duration-300 group-hover:translate-y-0 bg-transparent group-hover:bg-gradient-to-b group-hover:from-transparent group-hover:to-black/85">
-            <h3 class="font-bold text-xl text-white mb-2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-              {{ card.title }}
-            </h3>
-            <p class="text-white/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              {{ card.description }}
-            </p>
+  <div>
+    <div class="container mx-auto p-4 max-w-full md:max-w-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <a
+          v-for="card in cards"
+          :key="card.id"
+          :href="card.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border-2 border-transparent hover:border-secondary rounded-lg overflow-hidden shadow-md group hover:shadow-lg transition-all duration-300 cursor-pointer block"
+        >
+          <div class="relative h-64">
+            <NuxtImg
+              :src="card.image"
+              :alt="card.alt"
+              class="w-full h-full object-cover aspect-video transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 transition-all duration-300 group-hover:translate-y-0 bg-transparent group-hover:bg-gradient-to-b group-hover:from-transparent group-hover:to-black/85">
+              <h3 class="font-bold text-xl text-white mb-2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                {{ card.title }}
+              </h3>
+              <p class="text-white/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                {{ card.description }}
+              </p>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-/* Additional custom styles if needed */
-.container {
-  max-width: 1200px;
-}
-/* Ensure smooth transitions on mobile */
-@media (max-width: 768px) {
-  .group:hover .group-hover\:translate-y-0 {
-    transform: translateY(0);
-  }
-  .group:hover .group-hover\:opacity-100 {
-    opacity: 1;
-  }
-}
-</style>
