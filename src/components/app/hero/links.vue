@@ -73,8 +73,8 @@ function isImageFile(iconName: string): boolean {
           @click="handleLinkClick(item)"
         >
           <template v-if="item.important">
-            <span class="indicator-item status status-error animate-ping" />
-            <span class="indicator-item status status-error scale-75" />
+            <span class="indicator-item status status-success animate-ping" />
+            <span class="indicator-item status status-success" />
           </template>
 
           <!-- Conditional Icon/Image -->
