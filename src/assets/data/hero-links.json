@@ -10,8 +10,7 @@
     {
       "name": "LinkedIn",
       "url": "https://www.linkedin.com/in/leandroperes",
-      "icon": "logos:linkedin-icon",
-      "important": true
+      "icon": "logos:linkedin-icon"
     },
     {
       "name": "GitHub",
@@ -31,9 +30,9 @@
       "tooltip": "My ą̷͓̫̗͙̩̞̥͋͋̐͊̎̄̀̎̏͆̉̍̈̏̾͑͑͂̀̽͗͊̋̆̃̀̇͑̀̅̎͘͝͠rt̶̞̆͐"
     },
     {
-      "name": "Revolt.chat",
-      "url": "https://rvlt.gg/K9VNFS3p",
-      "icon": "simple-icons:revoltdotchat"
+      "name": "Shadertoy",
+      "url": "https://www.shadertoy.com/user/zschzen",
+      "icon": "/icons/shadertoy.png"
     }
   ]
 }

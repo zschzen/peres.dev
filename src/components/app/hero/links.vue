@@ -38,6 +38,16 @@ function handleLinkClick(item: MenuItem) {
     linkName: item.name,
   });
 }
+
+// Check if icon is an image file
+function isImageFile(iconName: string): boolean {
+  if (!iconName)
+    return false;
+  const imageExtensions = [".png", ".svg", ".jpg", ".jpeg", ".gif", ".webp"];
+  return imageExtensions.some(ext =>
+    iconName.toLowerCase().endsWith(ext),
+  );
+}
 </script>
 
 <template>
@@ -67,12 +77,21 @@ function handleLinkClick(item: MenuItem) {
             <span class="indicator-item status status-error scale-75" />
           </template>
 
+          <!-- Conditional Icon/Image -->
+          <img
+            v-if="isImageFile(item.icon)"
+            :src="item.icon"
+            :alt="item.name"
+            class="w-7 h-7 grayscale-25 group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+          >
           <Icon
+            v-else
             :name="item.icon"
             aria-hidden="true"
             size="1.75rem"
             class="grayscale-25 group-hover:grayscale-0 transition-color duration-300 ease-in-out"
           />
+
           <span class="sr-only">{{ item.name }}</span>
         </a>
       </li>
