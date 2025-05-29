@@ -2,7 +2,7 @@
 @plugin "daisyui";
 @plugin "daisyui/theme" {
   name: "oxocarbon-dark";
-  default: false;
+  default: true;
   prefersdark: true; /* set as default dark mode */
   color-scheme: dark; /* color of browser-provided UI */
 
