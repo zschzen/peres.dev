@@ -5,6 +5,7 @@
 
     <!-- App -->
     <AppHero />
+    <AppProjects />
     <LazyAppBlogPosts />
   </div>
 </template>
