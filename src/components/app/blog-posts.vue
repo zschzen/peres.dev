@@ -73,17 +73,10 @@ onMounted(fetchPosts);
 <template>
   <div class="container mx-auto p-4 max-w-full md:max-w-4xl">
     <!-- Header -->
-    <header class="text-center mb-2 py-6">
-      <div class="space-y-4">
-        <h1 class="text-3xl lg:text-4xl font-bold mb-3 tracking-wider relative">
-          Latest Blog Posts
-          <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1/3 h-0.5 bg-accent" />
-        </h1>
-        <p class="text-gray-500 text-base lg:text-lg font-medium tracking-wide">
-          Stay updated with my recent articles
-        </p>
-      </div>
-    </header>
+    <AppHeader
+      title="Latest Blog Posts"
+      subtitle="Stay updated with my recent articles"
+    />
 
     <!-- Loading -->
     <div v-if="loading" class="flex justify-center py-10">
