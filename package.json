@@ -17,6 +17,7 @@
     "@nuxt/eslint": "1.4.1",
     "@nuxt/fonts": "0.11.4",
     "@nuxt/icon": "1.13.0",
+    "@nuxt/image": "1.10.0",
     "@nuxt/scripts": "0.11.7",
     "@tailwindcss/vite": "^4.1.7",
     "@unhead/vue": "^2.0.3",
@@ -36,6 +37,12 @@
     "eslint-plugin-format": "^1.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "sharp"
+    ]
   },
   "lint-staged": {
     "*": "pnpm lint"

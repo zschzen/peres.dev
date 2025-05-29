@@ -78,12 +78,12 @@ function isImageFile(iconName: string): boolean {
           </template>
 
           <!-- Conditional Icon/Image -->
-          <img
+          <NuxtImg
             v-if="isImageFile(item.icon)"
             :src="item.icon"
             :alt="item.name"
             class="w-7 h-7 grayscale-25 group-hover:grayscale-0 transition-all duration-300 ease-in-out"
-          >
+          />
           <Icon
             v-else
             :name="item.icon"

@@ -63,13 +63,7 @@ export default defineNuxtConfig({
 
   srcDir: "src/",
 
-  modules: [
-    "@nuxt/eslint",
-    "@vesp/nuxt-fontawesome",
-    "@nuxt/icon",
-    "@nuxt/fonts",
-    "@nuxt/scripts",
-  ],
+  modules: ["@nuxt/eslint", "@vesp/nuxt-fontawesome", "@nuxt/icon", "@nuxt/fonts", "@nuxt/scripts", "@nuxt/image"],
 
   eslint: {
     config: {
