@@ -4,7 +4,7 @@
       <div class="text-center w-full">
         <!-- Profile Picture -->
         <div class="flex justify-center mb-4">
-          <AppProfilePicture />
+          <UiProfilePicture />
         </div>
 
         <!-- Name & Tagline -->

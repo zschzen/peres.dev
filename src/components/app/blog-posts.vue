@@ -73,7 +73,7 @@ onMounted(fetchPosts);
 <template>
   <div class="container mx-auto p-4 max-w-full md:max-w-4xl">
     <!-- Header -->
-    <AppHeader
+    <UiHeader
       title="Latest Blog Posts"
       subtitle="Stay updated with my recent articles"
     />
